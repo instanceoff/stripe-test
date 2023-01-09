@@ -12,8 +12,8 @@ const ProductDisplay = () => (
     <div className='product'>
       <Logo />
       <div className='description'>
-        <h3>Starter plan</h3>
-        <h5>$20.00 / month</h5>
+        <h3>Coach</h3>
+        <h5>$10.00 / month</h5>
       </div>
     </div>
     <form action='/create-checkout-session' method='POST'>
@@ -39,17 +39,6 @@ interface SuccessProps {
 }
 
 const SuccessDisplay: React.FC<SuccessProps> = ({ sessionId }) => {
-  // useEffect(() => {
-  //   const req = { session_id: sessionId };
-
-  //   fetch('/add-subsription', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json;charset=utf-8',
-  //     },
-  //     body: sessionId,
-  //   });
-  // }, []);
   return (
     <section>
       <div className='product Box-root'>
@@ -66,7 +55,7 @@ const SuccessDisplay: React.FC<SuccessProps> = ({ sessionId }) => {
           value={sessionId}
         />
         <button id='checkout-and-portal-button' type='submit'>
-          Manage your billing information
+          Add subscription
         </button>
       </form>
     </section>
